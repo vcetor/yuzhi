@@ -10,14 +10,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-<<<<<<< HEAD
-import javax.servlet.http.HttpServletRequest;
-=======
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
->>>>>>> 哈哈哈哈哈
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -37,11 +33,7 @@ public class UserController {
 
     @RequestMapping("/settings/qx/user/login.do")
     @ResponseBody
-<<<<<<< HEAD
-    public Object login(String loginAct, String loginPwd, String isRemPwd, HttpServletRequest request){
-=======
     public Object login(String loginAct, String loginPwd, String isRemPwd, HttpServletRequest request, HttpServletResponse response, HttpSession session){
->>>>>>> 哈哈哈哈哈
         //封装参数
         Map<String,Object> map = new HashMap<>();
         map.put("loginAct",loginAct);
@@ -71,8 +63,6 @@ public class UserController {
             }else{
                 //登录成功
                 returnObject.setCode(Contants.RETURN_OBJECT_CODE_SUCCESS);
-<<<<<<< HEAD
-=======
 
                 //把user保存到session中
                 session.setAttribute(Contants.SESSION_USER,user);
@@ -94,13 +84,10 @@ public class UserController {
                     response.addCookie(c1);
                     response.addCookie(c2);
                 }
->>>>>>> 哈哈哈哈哈
             }
         }
         return returnObject;
     }
-<<<<<<< HEAD
-=======
 
     @RequestMapping("/settings/qx/user/logout.do")
     public String logOut(HttpServletResponse response, HttpSession session){
@@ -117,5 +104,4 @@ public class UserController {
         //跳转到首页
         return "redirect:/";//借助springmvc来重定向，response.sendRedirect("/crm/");
     }
->>>>>>> 哈哈哈哈哈
 }

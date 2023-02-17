@@ -34,8 +34,6 @@ http://www.springframework.org/schema/util/spring-util.xsd">
         <property name="prefix" value="/WEB-INF/pages/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
-<<<<<<< HEAD
-=======
     
     <mvc:interceptors>
         <mvc:interceptor>
@@ -49,7 +47,6 @@ http://www.springframework.org/schema/util/spring-util.xsd">
         </mvc:interceptor>
     </mvc:interceptors>
     
->>>>>>> 哈哈哈哈哈
     <!-- 配置文件上传解析器 id:必须是multipartResolver-->
     <!--<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <property name="maxUploadSize" value="#{1024*1024*80}"/>
